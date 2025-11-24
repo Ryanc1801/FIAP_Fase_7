@@ -1,10 +1,7 @@
 from __future__ import annotations
-
 import tkinter as tk
 from tkinter import ttk, messagebox
-
 import pandas as pd
-
 from sensores import carregar_dados
 from tratamento import tratar_dados, resumo_estatistico
 from alertas import gerar_alertas, Alerta

@@ -10,10 +10,8 @@ Centraliza o envio de mensagens para o Amazon SNS.
 """
 
 from __future__ import annotations
-
 import os
 from typing import Optional
-
 import boto3
 from botocore.exceptions import BotoCoreError, ClientError
 

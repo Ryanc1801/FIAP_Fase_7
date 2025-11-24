@@ -87,3 +87,6 @@ A janela principal exibirá:
 - **Sensores** com tabela das leituras.
 - **Alertas** com lista dos alertas ATENÇÃO/CRÍTICO e botão para envio via SNS.
 - **Modelo de IA** para testar a previsão de risco (BAIXO / MÉDIO / ALTO) para qualquer registro.
+
+## 📹 Vídeo da Apresentação
+👉 **link do vídeo: https://youtu.be/VBxWqQFcCFs**  
