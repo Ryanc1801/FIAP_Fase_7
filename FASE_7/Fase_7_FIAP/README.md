@@ -1,25 +1,25 @@
 # FarmTech Solutions – Fase 7 (FIAP)
 
 Este projeto consolida as entregas das fases anteriores do PBL em uma **única aplicação desktop**,
-usando Python e Tkinter.
+usando Python
 
 ## Visão geral
 
 A aplicação integra:
 
-- **Fase 1 / 3 – Sensores**  
-  Leitura (ou simulação) de dados de sensores de campo: umidade, temperatura, pH e nutrientes.
+- **Sensores**  
+  Leitura (simulação) de dados de sensores de campo: umidade, temperatura, pH e nutrientes.
 
-- **Fase 2 – Tratamento estatístico**  
+- **Tratamento estatístico**  
   Limpeza de dados, criação de faixas de umidade/temperatura e resumo estatístico básico.
 
-- **Fase 3 – Regras de negócio / alertas**  
+- **Regras de negócio / alertas**  
   Geração automática de alertas de ATENÇÃO e CRÍTICO com base nas leituras.
 
-- **Fases 5 e 6 – Machine Learning**  
+- **Machine Learning**  
   Modelo simples de classificação de risco (BAIXO / MÉDIO / ALTO) usando scikit‑learn.
 
-- **Fase 5 – Computação em nuvem**  
+- **Computação em nuvem**  
   Integração com **Amazon SNS** para envio de alertas críticos por e‑mail.
 
 Toda a lógica fica organizada em módulos dentro de `src/` e a interface gráfica
@@ -28,17 +28,17 @@ Toda a lógica fica organizada em módulos dentro de `src/` e a interface gráfi
 ## Estrutura de pastas
 
 ```text
-Fase 7 - FIAP/
+Fase_7_FIAP/
 ├── data/
 │   └── sensores_demo.csv        # base de exemplo (pode ser substituída)
 ├── src/
 │   ├── __init__.py
 │   ├── aws_mensageria.py        # integração com Amazon SNS
-│   ├── fase1_sensores.py        # leitura/simulação de sensores
-│   ├── fase2_tratamento.py      # tratamento dos dados e estatísticas
-│   ├── fase3_alertas.py         # regras de negócio e geração de alertas
-│   ├── fase6_modelo.py          # modelo de risco em scikit‑learn
-│   └── main.py                  # aplicação Tkinter (ponto de entrada)
+│   ├── sensores.py              # leitura/simulação de sensores
+│   ├── tratamento.py            # tratamento dos dados e estatísticas
+│   ├── alertas.py               # regras de negócio e geração de alertas
+│   ├── modelo.py                # modelo de risco em scikit‑learn
+│   └── main.py                  # aplicação geral
 ├── requirements.txt
 └── README.md
 ```
@@ -87,11 +87,3 @@ A janela principal exibirá:
 - **Sensores** com tabela das leituras.
 - **Alertas** com lista dos alertas ATENÇÃO/CRÍTICO e botão para envio via SNS.
 - **Modelo de IA** para testar a previsão de risco (BAIXO / MÉDIO / ALTO) para qualquer registro.
-
-## Personalização
-
-- Você pode substituir o arquivo `data/sensores_demo.csv` pelos dados reais
-  coletados no seu projeto (mantendo as mesmas colunas).
-- As regras de alerta podem ser ajustadas em `fase3_alertas.py`.
-- A forma de criação do rótulo de risco e o modelo podem ser refinados em
-  `fase6_modelo.py` (por exemplo, trocando o algoritmo ou adicionando novos atributos).
